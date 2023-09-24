@@ -22,19 +22,19 @@
     <groupId>com.pig4cloud</groupId>
     <artifactId>pig</artifactId>
     <name>${project.artifactId}</name>
-    <version>3.7.1</version>
+    <version>3.8.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <url>https://www.pig4cloud.com</url>
 
     <properties>
-        <spring-boot.version>3.1.4</spring-boot.version>
-        <spring-cloud.version>2022.0.4</spring-cloud.version>
+        <spring-boot.version>3.2.0-M1</spring-boot.version>
+        <spring-cloud.version>2023.0.0-SNAPSHOT</spring-cloud.version>
         <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <spring-boot-admin.version>3.1.6</spring-boot-admin.version>
-        <spring.authorization.version>1.1.2</spring.authorization.version>
+        <spring.authorization.version>1.2.0-SNAPSHOT</spring.authorization.version>
         <screw.version>0.0.3</screw.version>
         <captcha.version>2.2.3</captcha.version>
         <aws.version>1.12.261</aws.version>
@@ -52,6 +52,7 @@
         <docker.username>username</docker.username>
         <docker.password>password</docker.password>
         <git.commit.plugin>6.0.0</git.commit.plugin>
+        <lombok.version>1.18.30</lombok.version>
         <spring.checkstyle.plugin>0.0.39</spring.checkstyle.plugin>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
     </properties>
@@ -86,6 +87,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
+            <version>${lombok.version}</version>
         </dependency>
         <!-- JAVA 17 -->
         <dependency>
@@ -274,17 +276,39 @@
 
     <repositories>
         <repository>
-            <id>snapshots</id>
-            <url>
-                https://oss.sonatype.org/content/repositories/snapshots/
-            </url>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
         </repository>
         <repository>
-            <id>release</id>
-            <url>
-                https://oss.sonatype.org/service/local/staging/deploy/maven2/
-            </url>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
         </repository>
     </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

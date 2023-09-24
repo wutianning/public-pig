@@ -6,7 +6,7 @@
 
     <groupId>com.pig4cloud</groupId>
     <artifactId>pig-common-bom</artifactId>
-    <version>3.7.1</version>
+    <version>3.8.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>pig-common-bom</name>
@@ -15,11 +15,11 @@
 
     <properties>
         <pig.common.version>${project.version}</pig.common.version>
-        <spring-boot.version>3.1.4</spring-boot.version>
+        <spring-boot.version>3.2.0-M1</spring-boot.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <log4j2.version>2.17.1</log4j2.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
         <git.commit.plugin>4.9.9</git.commit.plugin>
         <spring.checkstyle.plugin>0.0.39</spring.checkstyle.plugin>
         <fastjson.version>1.2.83</fastjson.version>

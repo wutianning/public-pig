@@ -72,7 +72,7 @@ public final class PigSentinelFeign {
 		}
 
 		@Override
-		public Feign build() {
+		public Feign internalBuild() {
 			super.invocationHandlerFactory(new InvocationHandlerFactory() {
 				@Override
 				public InvocationHandler create(Target target, Map<Method, MethodHandler> dispatch) {
@@ -120,7 +120,7 @@ public final class PigSentinelFeign {
 			});
 
 			super.contract(new SentinelContractHolder(contract));
-			return super.build();
+			return super.internalBuild();
 		}
 
 		private Object getFieldValue(Object instance, String fieldName) {

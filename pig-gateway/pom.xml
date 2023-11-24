@@ -79,10 +79,15 @@
             <artifactId>hutool-http</artifactId>
         </dependency>
         <!--接口文档-->
-        <dependency>
-            <groupId>org.springdoc</groupId>
-            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springdoc</groupId>-->
+<!--            <artifactId>springdoc-openapi-starter-webflux-ui</artifactId>-->
+<!--        </dependency>-->
+		<dependency>
+			<groupId>com.github.xiaoymin</groupId>
+			<artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+			<version>4.3.0</version>
+		</dependency>
         <!--引入Knife4j的官方ui包-->
         <dependency>
             <groupId>io.springboot</groupId>
